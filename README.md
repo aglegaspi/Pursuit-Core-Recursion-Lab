@@ -96,13 +96,26 @@ func sumEvens(_ nums: [Int]) -> Int {
 
 ```
 
-- ### Recursive range
+- ### Recursive range  √
 
 Write a function called `range` which takes in two numbers (num1, num2) as arguments. The function should return an array of numbers between num1 and num2.
 
 ```swift
 range(2,10); // returns [2, 3, 4, 5, 6,7, 8, 9, 10]
 range(17,20); // returns [17, 18, 19, 20]
+
+func range(_ num1: Int,_ num2: Int) -> [Int] {
+    print([num1])
+    // BASE CASE
+    if num1 == num2 {
+        return [num1]
+    }
+    
+    // RECURSIVE CALL
+    
+    return [num1] + range(num1 + 1, num2)
+    
+}
 ```
 
 
