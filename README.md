@@ -32,13 +32,35 @@ multArr([2, 3, 5]); // returns 30
 multArr([5, 5, 1, 2]); //returns 50
 ```
 
-- ### Concatenate array
+- ### Concatenate array √
 
 Write a function called `concatArr` that takes in an array of strings as an argument and recursively concatenates the strings together into a single string, with spaces between each original string.
 
-```js
+```swift
 concatArr(['is', 'it', 'tomorrow']); // returns 'is it tomorrow'
 concatArr(['or', 'just', 'the', 'end', 'of', 'time']); //returns 'or just the end of time'
+
+
+func concatArr(_ strings: [String]) -> String {
+    
+    var output = ""
+    
+    // BASE CASE
+    if strings.count == 1 {
+        return strings[0]
+    }
+    
+    // RECURSIVE CASE
+    for i in 0..<strings.count {
+        output += "\(concatArr([strings[i]])) "
+    }
+    return output
+    
+}
+
+
+concatArr(["is", "it", "tomorrow"]); // returns 'is it tomorrow'
+concatArr(["or", "just", "the", "end", "of", "time"]); //returns 'or just the end of time'
 ```
 
 - ### Sum evens
