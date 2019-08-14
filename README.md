@@ -78,16 +78,29 @@ concatArr(["or", "just", "the", "end", "of", "time"]); //returns 'or just the en
 
 Write a function called `sumEvens` that takes in an array of numbers as an argument and recursively sums only the even numbers in the array.
 
-```js
+```swift
 sumEvens([2, 3, 5, 6]); // returns 8
 sumEvens([10, 5, 1, 2, 12]); //returns 24
+
+func sumEvens(_ nums: [Int]) -> Int {
+    
+    // BASE CASE
+    if nums.count == 1 {
+        return nums[0]
+    }
+    
+    // RECURSIVE CASE
+    let evens = nums.filter({ $0 % 2 == 0})
+    return nums[0] + sumEvens(Array(evens[1...]))
+}
+
 ```
 
 - ### Recursive range
 
 Write a function called `range` which takes in two numbers (num1, num2) as arguments. The function should return an array of numbers between num1 and num2.
 
-```js
+```swift
 range(2,10); // returns [2, 3, 4, 5, 6,7, 8, 9, 10]
 range(17,20); // returns [17, 18, 19, 20]
 ```
