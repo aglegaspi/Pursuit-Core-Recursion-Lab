@@ -1,14 +1,25 @@
 # Recursion Exercises
 
-- ### Sum of all from 1 to n
+- ### Sum of all from 1 to n √
 
 Write a function that takes in a number as input and recursively finds the sum of all numbers up to and including that number.
 
-```js
-input: 6
-output: 21
-
+```swift
+//input: 6
+//output: 21
 //21 = 6 + 5 + 4 + 3 + 2 + 1
+
+func recursiveSum(n: Int) -> Int {
+    
+    // BASE CASE
+    if n == 0 { return 0 }
+    
+    // RECURSIVE CASE
+    return n + recursiveSum(n: n - 1)
+    
+}
+recursiveSum(n: 6)
+
 ```
 
 
