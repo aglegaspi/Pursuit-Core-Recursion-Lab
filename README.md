@@ -27,9 +27,20 @@ recursiveSum(n: 6)
 
 Write a function called `multArr` that takes in an array of numbers as an argument and recursively multiplies together all of the values in the array.
 
-```js
+```swift
 multArr([2, 3, 5]); // returns 30
 multArr([5, 5, 1, 2]); //returns 50
+
+func multArr(_ arrOfInts: [Int]) -> Int {
+    
+    // BASE CASE
+    if arrOfInts.count == 1 {
+        return arrOfInts[0]
+    }
+    
+    // RECURSIVE CASE
+    return arrOfInts[0] * multArr(Array(arrOfInts[1...]))
+}
 ```
 
 - ### Concatenate array √
