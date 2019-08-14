@@ -23,7 +23,7 @@ recursiveSum(n: 6)
 ```
 
 
-- ### Multiply array
+- ### Multiply array √
 
 Write a function called `multArr` that takes in an array of numbers as an argument and recursively multiplies together all of the values in the array.
 
@@ -74,7 +74,7 @@ concatArr(["is", "it", "tomorrow"]); // returns 'is it tomorrow'
 concatArr(["or", "just", "the", "end", "of", "time"]); //returns 'or just the end of time'
 ```
 
-- ### Sum evens
+- ### Sum evens √
 
 Write a function called `sumEvens` that takes in an array of numbers as an argument and recursively sums only the even numbers in the array.
 
@@ -110,7 +110,7 @@ range(17,20); // returns [17, 18, 19, 20]
 
 A child is running up a staircase with n steps and can hop either 1 step 2 steps or 3 steps at a time. Write a function called 'tripleStep', that takes in an argument `n` that represents the number of steps in the staircase, and returns a count of how many possible ways the child can run up the stairs.
 
-```js
+```swift
 tripleStep(3); //returns 4
 tripleStep(4); //returns 7
 tripleStep(5); //returns 13
@@ -126,7 +126,7 @@ Given an infinite number of quarters, dimes, nickels, and pennies, write code to
 In other words, write a function called `coinCombos` that takes in one argument: `n`, which represents the total amount of money (in cents) that you need to make change for. Your function should return the amount of possible combinations you can make to return that exact amount of change.
 
 For example:
-```js
+```swift
 coinCombos(5); //returns 2
 coinCombos(10); //returns 4
 coinCombos(25); //returns 13
